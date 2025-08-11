@@ -1,0 +1,18 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+#input-container {
+    margin-bottom: 10px;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}

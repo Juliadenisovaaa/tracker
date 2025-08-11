@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Простой список задач</title>
+    <!-- Firebase SDKs и конфигурация -->
+    <script type="module">
+
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics.js";
+
+
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAFXConyKFwsJSKQe7OFVd9BXYwxUxhZ9c",
+        authDomain: "simplewebsite-78afa.firebaseapp.com",
+        projectId: "simplewebsite-78afa",
+        storageBucket: "simplewebsite-78afa.firebasestorage.app",
+        messagingSenderId: "77383877254",
+        appId: "1:77383877254:web:152c1177cc34026307c707",
+        measurementId: "G-WEGZ34VDKW"
+      };
+
+
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Список задач</h1>
+    <div id="input-container">
+        <input type="text" id="new-task" placeholder="Добавить задачу">
+        <button id="add-button">Добавить</button>
+    </div>
+    <ul id="task-list"></ul>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
