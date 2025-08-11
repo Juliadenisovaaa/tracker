@@ -1,16 +1,15 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Простой список задач</title>
+    <title>напиши че то</title>
     <!-- Firebase SDKs и конфигурация -->
     <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics.js";
 
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics.js";
-
-
-
-      const firebaseConfig = {
+        const firebaseConfig = {
         apiKey: "AIzaSyAFXConyKFwsJSKQe7OFVd9BXYwxUxhZ9c",
         authDomain: "simplewebsite-78afa.firebaseapp.com",
         projectId: "simplewebsite-78afa",
@@ -21,18 +20,26 @@
       };
 
 
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
     </script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Список задач</h1>
+
+    <!-- Гифки -->
+    <img id="gif-default" src="https://imageup.ru/img94/5045706/cat-1.gif" alt="Default GIF">
+    <img id="gif-alternate" src="https://imageup.ru/img248/5045703/screamer.jpg" alt="Alternate GIF" style="display:none;">
+    <button id="show-gif-button">не надо было это трогать..</button>
+
+    <!-- Список задач -->
     <div id="input-container">
-        <input type="text" id="new-task" placeholder="Добавить задачу">
-        <button id="add-button">Добавить</button>
+        <input type="text" id="new-task" placeholder="Добавить надпись">
+        <button id="add-button">Добавить надпись</button>  <!-- Изменили текст кнопки -->
     </div>
     <ul id="task-list"></ul>
+
     <script src="script.js" type="module"></script>
 </body>
 </html>
